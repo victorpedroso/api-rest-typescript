@@ -1,0 +1,31 @@
+{
+  "name": "rest-api-ts",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx tsx ./src/index.ts",
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/jest": "^29.5.14",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "http-status-codes": "^2.3.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
