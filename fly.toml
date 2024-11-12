@@ -1,0 +1,23 @@
+# fly.toml file generated for rest-api-ts on 2024-11-12
+
+app = "rest-api-ts"  # Escolha um nome único para o seu app
+
+# Defina a imagem do Docker
+[build]
+  # Usar o Dockerfile para compilar a aplicação (explicaremos isso abaixo)
+  dockerfile = "Dockerfile"
+
+[env]
+  # Configurações de ambiente, se necessário
+  NODE_ENV = "production"
+  PORT = "3000"
+  # Adicione outras variáveis de ambiente conforme necessário
+
+[deploy]
+  release_command = "npm run build && npm run start"  # Comandos para compilar e rodar no Fly.io
+
+[services]
+  [[services.http]]
+    internal_port = 3000  # A porta interna onde sua API vai rodar
+    force_https = true  # Forçar HTTPS
+    port = 80  # A porta externa que será exposta
